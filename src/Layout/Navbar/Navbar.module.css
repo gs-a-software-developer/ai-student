@@ -1,0 +1,99 @@
+.container {
+  width: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100vh;
+}
+
+.logoContainer {
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 80px;
+  height: auto;
+}
+
+.icon {
+  width: 30px;
+  height: 30px;
+  margin-right: 10px;
+  color: #fcae7a66;
+  padding: auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.appName {
+  font-size: 28px;
+  color: #fafafa;
+  font-weight: light;
+  text-transform: uppercase;
+}
+
+ul {
+  list-style-type: none;
+  padding: 0;
+  margin: 0;
+  color: #B2C7F1;
+}
+
+li {
+  margin-bottom: 10px;
+}
+
+.link {
+  padding: 10px 30px;
+  display: flex;
+  gap: 10px;
+  color: #B2C7F1;
+  align-items: center;
+  transition: font-size 0.2s ease-in-out, padding 0.2s ease-in-out;
+  text-decoration: none;
+}
+
+.activeLink {
+  font-size: 1.2rem;
+  padding: 15px 35px;
+  color: #fafafa !important;
+}
+
+.upperMenu {
+  flex-grow: 1;
+}
+
+.bottomMenu {
+  margin: 20px 0;
+  text-align: center;
+}
+
+.imageContainer {
+  margin: 10px 0;
+  text-align: center;
+}
+
+.bottomImage {
+  width: 150px;
+  height: auto;
+}
+
+.upgradeButton {
+  margin-top: 10px;
+  padding: 10px 20px;
+  background-color: #fcae7a;
+  color: #fff; 
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.upgradeButton:hover {
+  background-color: #f79e4a;
+}
+

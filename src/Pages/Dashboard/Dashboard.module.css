@@ -1,0 +1,63 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.leftText,
+.rightText {
+  font-size: 14px;
+}
+
+.leftText {
+  font-size: 14px;
+  color: lightgrey;
+}
+
+.fileCount {
+  color: #007aff;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.rightText {
+  font-size: 14px;
+  color: #d2d2d2;
+  display: flex;
+  align-items: center;
+}
+
+.sortBy {
+  font-size: 14px;
+  color: #d2d2d2;
+  margin-right: 5px;
+}
+
+.dropdownIcon {
+  width: 16px;
+  height: 16px;
+  fill: #007aff;
+  font-weight: 500;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  /* padding: 0 10px; */
+}
+
+.content::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.content {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}

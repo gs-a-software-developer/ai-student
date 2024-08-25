@@ -1,0 +1,50 @@
+.container {
+  display: flex;
+  height: 100vh;
+  background-color: #0046cf;
+}
+
+.navbar {
+  /* Add styling for your navbar if needed */
+}
+
+.center {
+  display: flex;
+  flex: 1;
+  margin: 20px;
+  border-radius: 10px;
+  background-color: #ffffff;
+  overflow: hidden; /* Hide any overflow from the content */
+  height: calc(100vh - 40px); /* Adjust based on navbar height if necessary */
+}
+
+.content {
+  flex: 1;
+  padding: 20px;
+  overflow-y: auto; /* Allows vertical scrolling */
+}
+
+.sidebar {
+  width: 250px;
+  background-color: #f7f7f7;
+  padding: 20px;
+  overflow: hidden; /* Ensures the sidebar does not scroll */
+}
+
+.centeredContent {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.loginImage {
+  width: 100px; /* Adjust size as needed */
+  height: auto;
+}
+
+.loginText {
+  font-size: 1.2rem; /* Adjust size as needed */
+  margin-top: 10px;
+}

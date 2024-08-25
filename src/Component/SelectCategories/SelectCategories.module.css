@@ -1,0 +1,137 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%; /* Use full height within the modal */
+}
+
+.form {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  justify-content: space-between;
+}
+
+.subTitle {
+  font-size: 16px;
+  font-weight: 400;
+  margin: 0;
+  margin-bottom: 20px;
+  color: #090909;
+}
+
+.dropdownContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+}
+
+.dropdownItem::before {
+  content: '';
+  width: 12px;
+  height: 12px;
+  border: 1px solid #ececec;
+  background-color: white;
+  margin-right: 8px;
+  border-radius: 3px;
+}
+
+.selected::before {
+  background-color: #007bff;
+  border: 1px solid #007bff;
+}
+
+.searchInput {
+  width: 100%;
+  border: none;
+  outline: none;
+  font-size: 14px;
+}
+
+.dropdownWrapper {
+  position: relative;
+}
+
+.selectHeader {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+}
+
+.searchInput::placeholder {
+  color: rgb(214, 214, 214);
+  font-weight: 300;
+}
+
+.dropdownHeader {
+  padding: 10px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  background-color: white;
+  z-index: 10;
+}
+
+.tags {
+  display: flex;
+  flex-wrap: wrap;
+  border-top: none;
+}
+
+.tag {
+  background-color: #007bff;
+  color: white;
+  border-radius: 3px;
+  padding: 2px 8px;
+  margin: 2px;
+  display: flex;
+  align-items: center;
+}
+
+.removeTag {
+  margin-left: 6px;
+  cursor: pointer;
+  padding-bottom: 3px;
+}
+
+.arrow {
+  margin-left: 8px;
+}
+
+.dropdownList {
+  background-color: white;
+  border: 1px solid #ececec;
+  border-radius: 5px;
+  max-height: 200px;
+  overflow-y: auto;
+}
+
+.dropdownItem {
+  padding: 10px;
+  cursor: pointer;
+}
+
+.dropdownItem:hover {
+  background-color: #ececec;
+}
+
+.selected {
+  color: black;
+}
+
+.buttonsContainer {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 20px;
+}

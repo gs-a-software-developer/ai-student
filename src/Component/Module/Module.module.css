@@ -1,0 +1,67 @@
+.moduleContainer {
+  display: flex;
+  align-items: stretch;
+  border: 1px solid #d4ddeb;
+  background-color: #fff;
+  border-radius: 8px;
+  overflow: hidden;
+  padding: 10px;
+}
+
+.leftBar {
+  width: 5px; /* Adjust the width as necessary */
+  height: 100%;
+  border-radius: 5px;
+}
+
+.content {
+  flex-grow: 1;
+  padding: 5px 0 5px 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.iconContainer {
+  width: 20px;
+  height: 20px;
+  padding: 2.5px;
+  border-radius: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.moduleInfo {
+  flex-grow: 1;
+  margin-left: 16px;
+  font-size: 14px;
+}
+
+.moduleName {
+  color: #090909;
+  font-weight: 500;
+}
+
+.moduleCode {
+  color: gray;
+  font-size: 14px;
+}
+
+.menuIcon {
+  color: lightgray;
+  cursor: pointer;
+}
+
+.lecturerName {
+  font-size: 14px;
+  color: lightgray;
+  margin-top: 8px;
+  font-weight: 400;
+}

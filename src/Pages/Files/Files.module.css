@@ -1,0 +1,395 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 15px;
+}
+
+.pageTitle {
+  font-size: 32px;
+  font-weight: bold;
+  color: #007aff;
+}
+
+.searchBar {
+  padding: 8px;
+  font-size: 16px;
+  border: 0.1px solid #e6edfb;
+  border-radius: 4px;
+  outline: none;
+  flex: 1;
+}
+
+.searchBar::placeholder {
+  font-size: 14px;
+  color: lightgrey;
+  font-weight: 300;
+}
+
+.selectButton {
+  border-radius: 5px;
+  background-color: #e6edfb;
+  border: none;
+  outline: none;
+  padding: 5px 8px;
+  margin: 0 10px;
+}
+
+.deleteButton {
+  border-radius: 5px;
+  background-color: rgba(218, 38, 62, 0.1);
+  border: none;
+  outline: none;
+  padding: 5px 8px;
+}
+
+.deleteButtonActive {
+  background-color: #da263e;
+}
+
+.buttonContainer {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+}
+
+.textContainer {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+.leftText,
+.rightText {
+  font-size: 14px;
+}
+
+.leftText {
+  color: lightgrey;
+}
+
+.fileCount {
+  color: #007aff;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+.rightText {
+  font-size: 14px;
+  color: #d2d2d2;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  cursor: pointer;
+}
+
+.sortBy {
+  font-size: 14px;
+  color: #007aff;
+  margin-right: 5px;
+}
+
+.content {
+  flex: 1;
+  overflow-y: auto;
+  padding: 0 10px;
+}
+
+.content::-webkit-scrollbar {
+  width: 0;
+  background: transparent;
+}
+
+.content {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+
+.fileList {
+  flex: 1;
+  overflow-y: auto; /* Hides scrollbars */
+}
+
+.fileList::-webkit-scrollbar {
+  width: 0; /* Hides scrollbar for WebKit browsers */
+  background: transparent;
+}
+
+.fileList {
+  scrollbar-width: none; /* Hides scrollbar for Firefox */
+  -ms-overflow-style: none; /* Hides scrollbar for Internet Explorer and Edge */
+}
+
+
+.fileItem {
+  display: flex;
+  align-items: center;
+  margin-bottom: 10px;
+  gap: 10px;
+}
+
+.checkbox {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 0.1px solid #e6edfb;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.checkboxActive {
+  background-color: #007bff;
+  border-color: #007bff;
+}
+
+.pagination {
+  display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.pagination button {
+  padding: 8px 16px;
+  background-color: #007bff;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+.pagination button:disabled {
+  background-color: #d3d3d3;
+  cursor: not-allowed;
+}
+
+.pagination span {
+  align-self: center;
+}
+
+.removeButton {
+  background-color: #ff4d4d;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 20px;
+}
+
+/* Add styles for the new select all checkbox */
+.selectAllCheckbox {
+  margin-right: 10px;
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  border: 0.1px solid #e6edfb;
+  border-radius: 4px;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.pageButton {
+  background-color: #e6edfb;
+  color: #007aff;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.activePageButton {
+  background-color: #007aff;
+  color: #ffffff;
+}
+
+.pageButton:hover {
+  background-color: #cce0ff;
+}
+
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 69, 207, 0.3);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.sortModal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 450px;
+  height: 450px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.modalHeader {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+
+.closeButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.modalContent {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  gap: 10px;
+  flex-grow: 1; /* Allow content to grow and push the apply button to the bottom */
+}
+
+.modalContent button:hover {
+  background-color: #007aff;
+  color: #f0f0f0;
+}
+
+.sortModal {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  width: 450px;
+  height: 450px;
+  box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+}
+
+.leftSide {
+  display: flex;
+  gap: 10px;
+}
+
+.rightSide {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.modalFooter {
+  display: flex;
+  justify-content: flex-end;
+  margin-top: 20px;
+}
+
+.sortDropdown {
+  padding: 10px;
+  border-radius: 4px;
+  border-radius: 5px;
+  background-color: #e6edfb;
+  color: #007aff;
+  border: none;
+  outline: none;
+  cursor: pointer;
+  width: 200px;
+}
+
+.categoryCheckboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 200px;
+}
+
+.checkboxes {
+  appearance: none;
+  width: 16px;
+  height: 16px;
+  border: 0.1px solid #e6edfb;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, border-color 0.3s;
+}
+
+.categoryCheckboxes div { 
+  display: flex;
+  align-content: center;
+  gap: 10px;
+}
+
+.fileTypeDropdown {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  position: absolute;
+  background-color: white;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.fileTypeDropdown button {
+  display: flex;
+  align-items: center;
+  background: none;
+  border: none;
+  color: #007bff; /* Blue color when inactive */
+  font-size: 16px;
+  padding: 8px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.fileTypeDropdown button:hover {
+  background-color: #cceeff; /* Slightly darker light blue on hover */
+}
+
+.fileTypeDropdown button.selected {
+  background-color: #007bff; /* Blue background when selected */
+  color: white; /* White color when selected */
+}
+
+.modelButton {
+  border-radius: 5px;
+  background-color: #e6edfb;
+  color: #007aff;
+  border: none;
+  outline: none;
+  padding: 5px 8px;
+  cursor: pointer;
+  height: 40px;
+}
+
+.applyButton {
+  background-color: #007aff;
+  color: white;
+  border: none;
+  padding: 10px;
+  border-radius: 4px;
+  cursor: pointer;
+  align-self: flex-end; /* Ensures the button aligns to the bottom */
+  margin-top: auto; /* Pushes button to the bottom */
+}
+
+.applyButtonDisabled {
+  background-color: #e6edfb;
+  color: #007aff;
+  cursor: not-allowed;
+}

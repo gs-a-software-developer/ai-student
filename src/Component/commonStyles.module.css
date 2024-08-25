@@ -1,0 +1,43 @@
+.button {
+  padding: 8px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 400;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+.nextButton {
+  background-color: #007bff;
+  color: white;
+}
+
+.nextButton:hover {
+  background-color: #0056b3;
+}
+
+.backButton {
+  background-color: #f5f5f5;
+  color: #333;
+  border: 1px solid #dcdcdc;
+}
+
+.backButton:hover {
+  background-color: #e0e0e0;
+}
+
+.buttonsContainer {
+  /* background-color: lightgrey; */
+  /* padding: 10px; */
+  margin-top: 20px;
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+}
+
+.subTitle {
+  font-size: 16px;
+  font-weight: 400;
+  color: #090909;
+}
