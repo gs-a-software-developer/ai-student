@@ -1,0 +1,317 @@
+[
+  {
+    "id": 1,
+    "topic": "Discussion on React Components",
+    "time": "09:34",
+    "moduleCode": "MAD115C",
+    "color": "#007aff",
+    "messages": [
+      {
+        "time": "10:45 AM",
+        "text": "Hello, how can I help you?",
+        "isSender": false,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "10:46 AM",
+        "text": "I have a question about React components.",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "10:47 AM",
+        "text": null,
+        "isSender": false,
+        "attachments": [
+          {
+            "id": 1,
+            "name": "react_overview.pdf",
+            "type": "pdf"
+          },
+          {
+            "id": 2,
+            "type": "js",
+            "name": "script.js"
+          }
+        ],
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "topic": "JavaScript Best Practices",
+    "time": "12 Aug",
+    "moduleCode": "PHY102B",
+    "color": "#F48FFA",
+    "messages": [
+      {
+        "time": "12:00 PM",
+        "text": "What are some best practices for writing clean JavaScript?",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:01 PM",
+        "text": "Using meaningful variable names, avoiding global variables, and writing small, reusable functions are key.",
+        "isSender": false,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:05 PM",
+        "text": null,
+        "isSender": false,
+        "attachments": [
+          {
+            "id": 2,
+            "name": "best_practices.png",
+            "type": "image"
+          }
+        ],
+        "images": ["https://example.com/javascript_tips.png"]
+      },
+      {
+        "time": "12:10 PM",
+        "text": "Can you explain more about avoiding global variables? Why is it important?",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:12 PM",
+        "text": "Sure! Global variables are accessible throughout your code, which can lead to unexpected behaviors if they are modified by different parts of your application. Encapsulation and using module scopes help prevent this.",
+        "isSender": false,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:15 PM",
+        "text": "Got it. What about error handling? Any tips there?",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:17 PM",
+        "text": "Yes, always anticipate errors by using `try...catch` blocks and validate inputs. Avoid catching generic errors unless necessary, and provide meaningful error messages to help with debugging.",
+        "isSender": false,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:20 PM",
+        "text": "What about using `async` and `await` for asynchronous code?",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:22 PM",
+        "text": "Using `async` and `await` is great for writing readable asynchronous code. Always handle promise rejections with `try...catch` or `.catch()`. Also, avoid blocking the event loop with long-running operations.",
+        "isSender": false,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:25 PM",
+        "text": "Do you have an example of how to structure a module in JavaScript?",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:27 PM",
+        "text": "Sure! Here's a simple example:",
+        "isSender": false,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:28 PM",
+        "text": "```javascript\n// utils.js\nexport function add(a, b) {\n  return a + b;\n}\nexport function subtract(a, b) {\n  return a - b;\n}\n\n// main.js\nimport { add, subtract } from './utils.js';\nconsole.log(add(2, 3));\nconsole.log(subtract(5, 2));\n```",
+        "isSender": false,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:30 PM",
+        "text": "Nice! How about tips for improving performance?",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:32 PM",
+        "text": "Optimize DOM manipulation by batching updates, avoid memory leaks by cleaning up event listeners, and use lazy loading for images and components. Profiling tools like Chrome DevTools can help identify bottlenecks.",
+        "isSender": false,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:35 PM",
+        "text": "This is really helpful. Do you have any resources to dive deeper into JavaScript best practices?",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:37 PM",
+        "text": "Yes, check out the following:\n1. Eloquent JavaScript\n2. JavaScript: The Good Parts\n3. Mozilla Developer Network (MDN) Docs\nI can send you links if you’d like.",
+        "isSender": false,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:40 PM",
+        "text": "Please send them!",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:42 PM",
+        "text": null,
+        "isSender": false,
+        "attachments": [
+          {
+            "id": 3,
+            "name": "eloquent_js_link.txt",
+            "type": "text"
+          },
+          {
+            "id": 4,
+            "name": "javascript_good_parts.pdf",
+            "type": "pdf"
+          }
+        ],
+        "images": []
+      },
+      {
+        "time": "12:45 PM",
+        "text": "Thanks for all the resources and tips!",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "12:47 PM",
+        "text": "You're welcome! Let me know if you have more questions.",
+        "isSender": false,
+        "attachments": [],
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "topic": "New CSS Features",
+    "time": "25 October",
+    "moduleCode": "BIO210A",
+    "color": "#61A5F3",
+    "messages": [
+      {
+        "time": "2:30 PM",
+        "text": "Can you explain the new CSS features in the latest spec?",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "2:34 PM",
+        "text": null,
+        "isSender": false,
+        "attachments": [
+          {
+            "id": 3,
+            "name": "css_features.pdf",
+            "type": "pdf"
+          }
+        ],
+        "images": ["https://example.com/css_features_example.png"]
+      },
+      {
+        "time": "2:36 PM",
+        "text": "Here is an example of container queries in action.",
+        "isSender": false,
+        "attachments": [],
+        "images": ["https://example.com/css_container_queries.png"]
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "topic": "Responsive Design Principles",
+    "time": "15:20",
+    "moduleCode": "DSA320C",
+    "color": "#8D9BDF",
+    "messages": [
+      {
+        "time": "3:10 PM",
+        "text": "Can you send me an overview of Scrum?",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "3:12 PM",
+        "text": null,
+        "isSender": false,
+        "attachments": [
+          {
+            "id": 4,
+            "name": "scrum_overview.pdf",
+            "type": "pdf"
+          }
+        ],
+        "images": []
+      },
+      {
+        "time": "3:15 PM",
+        "text": "Thanks for this!",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "topic": "State Management in Redux",
+    "time": "16:00",
+    "moduleCode": "REDUX200",
+    "color": "#34A853",
+    "messages": [
+      {
+        "time": "4:20 PM",
+        "text": "What are some tips for designing user-friendly interfaces?",
+        "isSender": true,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "4:22 PM",
+        "text": "Keep interfaces simple, use consistent elements, and ensure accessibility.",
+        "isSender": false,
+        "attachments": [],
+        "images": []
+      },
+      {
+        "time": "4:25 PM",
+        "text": "Check out this design checklist.",
+        "isSender": false,
+        "attachments": [
+          {
+            "id": 5,
+            "name": "design_checklist.pdf",
+            "type": "pdf"
+          }
+        ],
+        "images": []
+      }
+    ]
+  }
+]

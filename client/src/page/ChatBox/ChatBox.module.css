@@ -1,0 +1,38 @@
+/* ChatBox.module.css */
+.chatboxContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
+  box-sizing: border-box;
+}
+
+.header {
+  display: flex;
+  align-items: flex-start;
+  gap: var(--spacing-medium);
+  padding-bottom: var(--spacing-large);
+}
+
+.backButton {
+  background: none;
+  border: none;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.backCaret {
+  cursor: pointer;
+  transition: color 0.3s ease, background-color 0.3s ease;
+  padding: var(--spacing-small) 0;
+  border-radius: 50%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: auto;
+}
+
+.backCaret:hover {
+  color: var(--color-muted);
+}
