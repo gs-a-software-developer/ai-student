@@ -63,9 +63,6 @@ const Chat = () => {
           placeholder="Enter text here"
           type="text"
         />
-        <button className={styles.attachmentButton}>
-          <Paperclip size={16} color="#34A853" />
-        </button>
         <button className={styles.sendButton}>
           <PaperPlaneRight size={16} color="#007aff" />
         </button>

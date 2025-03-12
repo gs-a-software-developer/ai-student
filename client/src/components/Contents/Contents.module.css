@@ -195,7 +195,6 @@
   border: none;
   outline: none;
   padding: 10px;
-  margin-left: var(--spacing-small);
 }
 
 @keyframes wave {

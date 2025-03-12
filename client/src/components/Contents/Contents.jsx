@@ -1,4 +1,4 @@
-//  Contents
+// Contents.jsx
 import React, { useState, useEffect, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
@@ -8,7 +8,7 @@ import Content from "../Content/Content.jsx";
 import { CaretLeft, Sliders } from "@phosphor-icons/react";
 import styles from "./Contents.module.css";
 
-const Contents = ({ onSearch }) => {
+const Contents = ({ onSelectFiles }) => {
   const navigate = useNavigate();
   const { moduleName } = useParams();
   const dispatch = useDispatch();
@@ -20,12 +20,11 @@ const Contents = ({ onSearch }) => {
   const [searchQuery, setSearchQuery] = useState("");
   const [filteredData, setFilteredData] = useState({});
   const [isModalOpen, setIsModalOpen] = useState(false);
+  const [selectedFiles, setSelectedFiles] = useState([]);
 
   const handleBack = () => navigate(-1);
 
   useEffect(() => {
-    console.log("Module Name from URL:", moduleName);
-    console.log("Available Content Keys in Redux:", Object.keys(content));
     if (moduleName) {
       dispatch(fetchContent(moduleName));
     }
@@ -87,6 +86,22 @@ const Contents = ({ onSearch }) => {
     searchQuery,
   ]);
 
+  const handleSelectFile = (fileId) => {
+    console.log("File selected:", fileId); // Debugging log
+    setSelectedFiles((prevSelected) => {
+      if (prevSelected.includes(fileId)) {
+        return prevSelected.filter((id) => id !== fileId);
+      } else {
+        return [...prevSelected, fileId];
+      }
+    });
+  };
+
+  // Pass selectedFiles to the parent component
+  useEffect(() => {
+    onSelectFiles(selectedFiles);
+  }, [selectedFiles, onSelectFiles]);
+
   return (
     <div className={styles.contentsContainer}>
       {loading && <p>Loading content...</p>}
@@ -121,7 +136,14 @@ const Contents = ({ onSearch }) => {
         {Object.entries(filteredData).map(([section, contents]) => (
           <div key={section}>
             {Array.isArray(contents) && contents.length > 0 ? (
-              contents.map((item) => <Content key={item.id} content={item} />)
+              contents.map((item) => (
+                <Content
+                  key={item.id}
+                  content={item}
+                  isSelected={selectedFiles.includes(item.id)}
+                  onSelect={handleSelectFile}
+                />
+              ))
             ) : (
               <p className={styles.noContentMessage}>
                 No content available for the selected filters.
@@ -153,6 +175,4 @@ const Contents = ({ onSearch }) => {
   );
 };
 
-
 export default Contents;
-

@@ -14,7 +14,8 @@ import {
 import { getIconAndColor } from "../../utils/getIconAndColor";
 import styles from "./Content.module.css";
 
-const Content = ({ content }) => {
+const Content = ({ content, isSelected, onSelect }) => {
+  console.log("Content rendered:", content.id); // Debugging log
   const { icon, color } = getIconAndColor(content.contentType);
   const IconComponent = {
     Book: Book,
@@ -29,18 +30,32 @@ const Content = ({ content }) => {
   }[icon] || Book;
 
   return (
-    <div key={content.id} className={styles.moduleContainer}>
-      <div className={styles.leftBar} style={{ backgroundColor: color }}></div>
-      <div className={styles.content}>
-        <div className={styles.iconContainer} style={{ backgroundColor: `${color}33` }}>
-          <IconComponent size={20} color={color} />
-        </div>
-        <div className={styles.moduleInfo}>
-          <div>
-            <span className={styles.moduleName}>{content.contentType}</span>
-            <span className={styles.moduleCode}> {" - " + content.name}</span>
+    <div className={styles.contentWrapper}>
+      <div className={styles.checkboxContainer}>
+        <input
+          type="checkbox"
+          checked={isSelected}
+          onChange={() => {
+            console.log("Checkbox clicked:", content.id);
+            onSelect(content.id);
+          }}
+          className={styles.checkbox}
+        />
+      </div>
+
+      <div key={content.id} className={styles.moduleContainer}>
+        <div className={styles.leftBar} style={{ backgroundColor: color }}></div>
+        <div className={styles.content}>
+          <div className={styles.iconContainer} style={{ backgroundColor: `${color}33` }}>
+            <IconComponent size={20} color={color} />
           </div>
-          <span className={styles.subtopic}>{content.subject || "Unknown Subject"}</span>
+          <div className={styles.moduleInfo}>
+            <div>
+              <span className={styles.moduleName}>{content.contentType}</span>
+              <span className={styles.moduleCode}> {" - " + content.name}</span>
+            </div>
+            <span className={styles.subtopic}>{content.subject || "Unknown Subject"}</span>
+          </div>
         </div>
       </div>
     </div>

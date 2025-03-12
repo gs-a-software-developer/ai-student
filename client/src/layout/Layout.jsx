@@ -1,4 +1,5 @@
 // Layout.jsx
+import React, { useState } from "react";
 import { Routes, Route, useLocation, Navigate } from "react-router-dom";
 import Welcome from "../components/Welcome/Welcome";
 import Navbar from "../components/Navbar/Navbar";
@@ -15,26 +16,25 @@ import styles from "./Layout.module.css";
 
 const sidebarComponents = {
   "/ai-tutor/chatbox": <Chats />,
-  "/ai-tutor/modules": <Generate />,
-  "/ai-tutor/contents": <Generate />,
+  "/ai-tutor/modules": <Generate selectedFiles={[]} />,
+  "/ai-tutor/contents": <Generate selectedFiles={[]} />,
 };
 
-const getSidebarComponent = (path) => {
-  if (path.startsWith("/ai-tutor/chatbox"))
-    return sidebarComponents["/ai-tutor/chatbox"];
+const getSidebarComponent = (path, selectedFiles) => {
+  if (path.startsWith("/ai-tutor/chatbox")) return <Chats />;
   if (path.startsWith("/authentication")) return <Role />;
-  if (
-    path.startsWith("/ai-tutor/modules") ||
-    path.startsWith("/ai-tutor/contents")
-  ) {
-    return sidebarComponents["/ai-tutor/modules"];
-  }
+
+  if (path === "/ai-tutor/modules") return null; // Empty sidebar for Modules
+  if (path.startsWith("/ai-tutor/modules/"))
+    return <Generate selectedFiles={selectedFiles} />; // Show Generate for moduleName
+
   return null;
 };
 
 const Layout = () => {
   const { pathname } = useLocation();
   const isAuthPage = pathname.startsWith("/authentication");
+  const [selectedFiles, setSelectedFiles] = useState([]);
 
   return (
     <div className={styles.container}>
@@ -53,12 +53,17 @@ const Layout = () => {
 
             {/* App Routes */}
             <Route path="/ai-tutor/modules" element={<Modules />} />
-            <Route path="/ai-tutor/modules/:moduleName" element={<Contents />} />
+            <Route
+              path="/ai-tutor/modules/:moduleName"
+              element={<Contents onSelectFiles={setSelectedFiles} />}
+            />
             <Route path="/ai-tutor/chatbox" element={<ChatBox />} />
             <Route path="/ai-tutor/chatbox/:id" element={<ChatBox />} />
           </Routes>
         </div>
-        <div className={styles.sidebar}>{getSidebarComponent(pathname)}</div>
+        <div className={styles.sidebar}>
+          {getSidebarComponent(pathname, selectedFiles)}
+        </div>
       </div>
     </div>
   );

@@ -114,7 +114,7 @@
 }
 
 .checkbox {
-  border-radius: var(--radius-small);
+  border-radius: var(--radius-xs);
 }
 
 .radio {
@@ -126,17 +126,20 @@
   background-color: var(--color-secondary-2);
 }
 
+.radio:checked::after {
+  border-radius: 50%;
+}
+
 .checkbox:checked::after,
 .radio:checked::after {
   content: "";
   width: 9px;
   height: 9px;
   background-color: var(--color-secondary);
-  border-radius: 50%;
 }
 
 .checkbox:checked::after {
-  border-radius: var(--radius-small);
+  border-radius: 2px;
 }
 
 .modalFooter {

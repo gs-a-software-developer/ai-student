@@ -22,7 +22,8 @@
 
 .sidebar {
   width: 300px;
-  background-color: #f7f7f7;
+  /* background-color: #f7f7f7; */
+  background-color: rgba(182, 193, 214, 0.15);
   padding: 20px;
   overflow: hidden;
 }
