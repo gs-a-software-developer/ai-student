@@ -2,7 +2,7 @@
 import React, { useState, useEffect, useMemo } from "react";
 import { useNavigate, useParams } from "react-router-dom";
 import { useDispatch, useSelector } from "react-redux";
-import { fetchContent } from "../../redux/actions/contentActions";
+import { fetchContent, deleteContent } from "../../redux/actions/contentActions"; // Import deleteContent
 import SortModal from "../../components/SortModal/SortModal";
 import Content from "../Content/Content.jsx";
 import { CaretLeft, Sliders } from "@phosphor-icons/react";
@@ -87,7 +87,7 @@ const Contents = ({ onSelectFiles }) => {
   ]);
 
   const handleSelectFile = (fileId) => {
-    console.log("File selected:", fileId); // Debugging log
+    console.log("File selected:", fileId);
     setSelectedFiles((prevSelected) => {
       if (prevSelected.includes(fileId)) {
         return prevSelected.filter((id) => id !== fileId);
@@ -95,6 +95,12 @@ const Contents = ({ onSelectFiles }) => {
         return [...prevSelected, fileId];
       }
     });
+  };
+
+  // Handler for deleting a file
+  const handleDeleteFile = (fileId) => {
+    console.log("Deleting file:", fileId);
+    dispatch(deleteContent(moduleName, fileId));
   };
 
   // Pass selectedFiles to the parent component
@@ -142,6 +148,7 @@ const Contents = ({ onSelectFiles }) => {
                   content={item}
                   isSelected={selectedFiles.includes(item.id)}
                   onSelect={handleSelectFile}
+                  onDelete={handleDeleteFile}
                 />
               ))
             ) : (

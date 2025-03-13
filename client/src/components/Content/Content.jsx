@@ -10,11 +10,12 @@ import {
   CardsThree,
   Graph,
   Slideshow,
+  Trash, // Import the Trash icon
 } from "@phosphor-icons/react";
 import { getIconAndColor } from "../../utils/getIconAndColor";
 import styles from "./Content.module.css";
 
-const Content = ({ content, isSelected, onSelect }) => {
+const Content = ({ content, isSelected, onSelect, onDelete }) => {
   console.log("Content rendered:", content.id); // Debugging log
   const { icon, color } = getIconAndColor(content.contentType);
   const IconComponent = {
@@ -56,6 +57,10 @@ const Content = ({ content, isSelected, onSelect }) => {
             </div>
             <span className={styles.subtopic}>{content.subject || "Unknown Subject"}</span>
           </div>
+        </div>
+        {/* Delete icon */}
+        <div className={styles.deleteIcon} onClick={() => onDelete(content.id)}>
+          <Trash size={20} color="var(--color-muted)" />
         </div>
       </div>
     </div>

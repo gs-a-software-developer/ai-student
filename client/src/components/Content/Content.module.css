@@ -30,6 +30,7 @@
   cursor: pointer;
   transition: border-color 0.3s ease;
   flex: 1;
+  position: relative; /* Add this for positioning the delete icon */
 }
 
 .moduleContainer.selected {
@@ -46,6 +47,7 @@
   display: flex;
   align-items: center;
   gap: var(--spacing-medium);
+  flex: 1; /* Ensure content takes up available space */
 }
 
 .iconContainer {
@@ -103,4 +105,20 @@
   background-color: var(--color-secondary);
   border-radius: 2px;
   border: none;
+}
+
+/* Delete icon styles */
+.deleteIcon {
+  position: absolute;
+  right: var(--spacing-medium);
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+  /* padding: var(--spacing-small); */
+  border-radius: var(--radius-small);
+  transition: background-color 0.3s ease;
+}
+
+.deleteIcon:hover {
+  background-color: var(--color-background-hover);
 }

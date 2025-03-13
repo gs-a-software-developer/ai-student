@@ -12,6 +12,7 @@ import Role from "../components/Role/Role";
 import Modules from "../components/Modules/Modules";
 import Contents from "../components/Contents/Contents";
 import ChatBox from "../page/ChatBox/ChatBox";
+import Settings from "../page/Settings/Settings";
 import styles from "./Layout.module.css";
 
 const sidebarComponents = {
@@ -59,6 +60,7 @@ const Layout = () => {
             />
             <Route path="/ai-tutor/chatbox" element={<ChatBox />} />
             <Route path="/ai-tutor/chatbox/:id" element={<ChatBox />} />
+            <Route path="/ai-tutor/settings" element={<Settings />}/>
           </Routes>
         </div>
         <div className={styles.sidebar}>
