@@ -10,7 +10,7 @@ import {
   CardsThree,
   Graph,
   Slideshow,
-  Trash, // Import the Trash icon
+  DownloadSimple
 } from "@phosphor-icons/react";
 import { getIconAndColor } from "../../utils/getIconAndColor";
 import styles from "./Content.module.css";
@@ -59,8 +59,8 @@ const Content = ({ content, isSelected, onSelect, onDelete }) => {
           </div>
         </div>
         {/* Delete icon */}
-        <div className={styles.deleteIcon} onClick={() => onDelete(content.id)}>
-          <Trash size={20} color="var(--color-muted)" />
+        <div className={styles.deleteIcon}>
+          <DownloadSimple size={20} color="var(--color-muted)" />
         </div>
       </div>
     </div>

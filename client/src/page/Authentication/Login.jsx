@@ -24,19 +24,17 @@ const Login = ({ handleSwitch }) => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    if (validateForm()) {
-      // Simulate authentication
-      const userData = { studentIdentifier, password };
-      dispatch(loginUser(userData));
-
-      // Store user data in localStorage
-      localStorage.setItem('userData', JSON.stringify(userData));
-
-      navigate("/ai-tutor/modules");
-    } else {
-      dispatch(setAuthError("Invalid credentials"));
-    }
-  };
+  
+    // Mock user data (bypassing authentication)
+    const userData = { studentIdentifier, password };
+    dispatch(loginUser(userData));
+  
+    // Store user data in localStorage
+    localStorage.setItem('userData', JSON.stringify(userData));
+  
+    // Redirect user
+    navigate("/ai-tutor/modules");
+  };  
 
   return (
     <div className={styles.container}>

@@ -134,7 +134,7 @@
 
 .cancelButton {
   background-color: rgba(218, 38, 62, 0.1);
-  color: #da263e;
+  color: #D62728;
   border: none;
   padding: var(--spacing-small) var(--spacing-medium);
   cursor: pointer;
@@ -144,6 +144,6 @@
 }
 
 .cancelButton:hover {
-  background-color: #ff1a1a;
+  background-color: #D62728;
   color: var(--color-white);
 }

@@ -25,9 +25,9 @@ const getSidebarComponent = (path, selectedFiles) => {
   if (path.startsWith("/ai-tutor/chatbox")) return <Chats />;
   if (path.startsWith("/authentication")) return <Role />;
 
-  if (path === "/ai-tutor/modules") return null; // Empty sidebar for Modules
+  if (path === "/ai-tutor/modules") return null;
   if (path.startsWith("/ai-tutor/modules/"))
-    return <Generate selectedFiles={selectedFiles} />; // Show Generate for moduleName
+    return <Generate selectedFiles={selectedFiles} />;
 
   return null;
 };

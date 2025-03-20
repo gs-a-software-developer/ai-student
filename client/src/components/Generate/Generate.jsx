@@ -1,14 +1,14 @@
 // Generate
 import React, { useState, useEffect, useRef } from "react";
-import { Notepad, QuestionMark, CardsThree } from "@phosphor-icons/react";
+import { Notepad, QuestionMark, CardsThree, OpenAiLogo  } from "@phosphor-icons/react";
 import styles from "./Generate.module.css";
 
 const icons = [
   { id: 1, label: "Quiz", icon: <QuestionMark size={20} />, color: "#1542B4" },
   {
     id: 2,
-    label: "Flash Cards",
-    icon: <CardsThree size={20} />,
+    label: "AI Chat",
+    icon: <OpenAiLogo  size={20} />,
     color: "#F48FFA",
   },
   { id: 3, label: "Summary", icon: <Notepad size={20} />, color: "#61A5F3" },
@@ -42,14 +42,14 @@ const Generate = ({ selectedFiles }) => {
       
       setTimeout(() => {
         setIsLoading(false);
-        alert(`Generated ${generationType} for selected files.`);
+        // alert(`Generated ${generationType} for selected files.`);
       }, 3000);
     } else {
       if (selectedFiles.length === 0) {
-        alert("Please select at least one file.");
+        // alert("Please select at least one file.");
       }
       if (!selectedId) {
-        alert("Please select a generation type.");
+        // alert("Please select a generation type.");
       }
     }
   };
